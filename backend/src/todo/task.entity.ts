@@ -12,16 +12,16 @@ export class TaskEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ name: 'title', nullable: false })
+  @Column({ name: 'title' })
   title: string;
 
-  @Column({ name: 'description' })
-  description: string;
+  @Column({ name: 'description', nullable: true })
+  description?: string;
 
-  @Column({ name: 'due_date', type: 'timestamp' })
-  dueDate: string;
+  @Column({ name: 'due_date', type: 'timestamp', nullable: true })
+  dueDate?: string;
 
-  @Column({ name: 'status', nullable: false })
+  @Column({ name: 'status', default: false })
   status: boolean;
 
   @CreateDateColumn({ name: 'created_at' })
