@@ -26,7 +26,6 @@ function App() {
     description: "",
     dueDate: "",
     status: false,
-    deletedAt: "",
     createdAt: "",
     updatedAt: "",
   });

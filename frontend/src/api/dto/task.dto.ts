@@ -4,7 +4,6 @@ export interface TaskDto {
   description: string;
   dueDate: string;
   status: boolean;
-  deletedAt: string;
   createdAt: string;
   updatedAt: string;
 }
