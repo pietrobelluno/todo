@@ -17,7 +17,11 @@ export class TaskService {
   }
 
   findAll(): Promise<TaskEntity[]> {
-    return this.todoRepository.find();
+    return this.todoRepository.find({
+      order: {
+        createdAt: 'DESC',
+      },
+    });
   }
 
   async findOne(id: string): Promise<TaskEntity> {

@@ -12,10 +12,10 @@ export class TaskEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ name: 'title' })
+  @Column({ name: 'title', length: 64 })
   title: string;
 
-  @Column({ name: 'description', nullable: true })
+  @Column({ name: 'description', nullable: true, length: 256 })
   description?: string;
 
   @Column({ name: 'due_date', type: 'timestamp', nullable: true })

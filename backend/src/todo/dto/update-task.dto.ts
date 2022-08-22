@@ -1,12 +1,20 @@
-import { IsBoolean, IsISO8601, IsOptional, IsString } from 'class-validator';
+import {
+  IsBoolean,
+  IsISO8601,
+  IsOptional,
+  IsString,
+  MaxLength,
+} from 'class-validator';
 
 export class UpdateTaskDto {
   @IsOptional()
   @IsString()
+  @MaxLength(64)
   title: string;
 
   @IsOptional()
   @IsString()
+  @MaxLength(256)
   description: string;
 
   @IsOptional()
