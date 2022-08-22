@@ -23,5 +23,5 @@ export class UpdateTaskDto {
 
   @IsOptional()
   @IsBoolean()
-  status: boolean;
+  status?: boolean;
 }
