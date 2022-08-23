@@ -6,25 +6,21 @@
   
 
 ### run frontend:
-  - you need to create `.env` file, see `.env-example` file
-  - in the frontend folder
+  - `cd frontend`
+  - you need to create `.env` file and setup the api url, see `.env-example` file
   - run `npm run start`
   - the frontend will run in http://localhost:3000/
 
-### run tests in frontend:
-  - in the frontend folder
-  - run `npm run test`
-  - to see the coverage run `npm run coverage`
-
 ### run backend:
-  - you need to create a `.env` file, see the `.env-example` file
-  - in the backend folder 
+  - `cd backend`
+  - create a `.env` file and setup the database connections, see the `.env-example` file
   - run `npm run start`
   - the backend will run in http://localhost:8081/
 
-### run tests in backend:
-  - in the backend folder
+### running tests:
+  - `cd` to either the frontend or backend folder
   - run `npm run test`
+  - run `npm run coverage` if you want to see the coverage report
 
 
 
