@@ -20,11 +20,12 @@
   - you need to create a `.env` file, see the `.env-example` file
   - in the backend folder 
   - run `npm run start`
+  - the backend will run in http://localhost:8081/
 
 ### run tests in backend:
   - in the backend folder
   - run `npm run test`
-  - the backend will run in http://localhost:8081/
+
 
 
 ## video preview:
