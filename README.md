@@ -14,7 +14,7 @@
   - to see the coverage run `npm run coverage` or `yarn coverage`
 
 ### run backend:
-  - you need edit the connections of your database in the `.env`, see the `.env-example` file
+  - you need to edit the connections of your database in the `.env`, see the `.env-example` file
   - in the backend folder 
   - run `npm run start` or `yarn start`
 
