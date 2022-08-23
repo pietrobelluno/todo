@@ -49,6 +49,7 @@ const CreateTaskModal = ({ isOpen, close, save }: Props) => {
       </DialogTitle>
       <DialogContent>
         <TextField
+          inputProps={{ "data-testid": "title" }}
           autoFocus
           margin="dense"
           id="title"
@@ -60,6 +61,7 @@ const CreateTaskModal = ({ isOpen, close, save }: Props) => {
           onChange={(e) => setTitle(e.target.value)}
         />
         <TextField
+          inputProps={{ "data-testid": "description" }}
           margin="dense"
           id="description"
           label="Description"
@@ -70,6 +72,7 @@ const CreateTaskModal = ({ isOpen, close, save }: Props) => {
           onChange={(e) => setDescription(e.target.value)}
         />
         <TextField
+          inputProps={{ "data-testid": "dueDate" }}
           margin="dense"
           id="description"
           // label="Description"

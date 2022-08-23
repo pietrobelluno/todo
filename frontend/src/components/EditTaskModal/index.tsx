@@ -58,6 +58,7 @@ const EditTaskModal = ({ task, isOpen, close, update }: Props) => {
       <DialogContent>
         <TextField
           autoFocus
+          inputProps={{ "data-testid": "title" }}
           margin="dense"
           id="title"
           label="Title"
@@ -69,6 +70,7 @@ const EditTaskModal = ({ task, isOpen, close, update }: Props) => {
         />
         <TextField
           margin="dense"
+          inputProps={{ "data-testid": "description" }}
           id="description"
           label="Description"
           type="text"
@@ -79,7 +81,8 @@ const EditTaskModal = ({ task, isOpen, close, update }: Props) => {
         />
         <TextField
           margin="dense"
-          id="description"
+          inputProps={{ "data-testid": "dueDate" }}
+          id="dueDate"
           type="datetime-local"
           fullWidth
           variant="outlined"

@@ -1,7 +1,6 @@
 import {
   ListItem,
   Box,
-  Typography,
   IconButton,
   ListItemAvatar,
   Checkbox,
@@ -9,11 +8,15 @@ import {
 } from "@mui/material";
 
 import DeleteIcon from "@mui/icons-material/Delete";
-import EditIcon from "@mui/icons-material/Edit";
 
 import { TaskDto } from "../../api/dto/task.dto";
 
 import * as S from "./styles";
+
+interface MyCheckboxDisplayProps
+  extends React.HTMLAttributes<HTMLInputElement> {
+  "data-testid"?: string;
+}
 
 interface Props {
   item: TaskDto;
@@ -41,7 +44,6 @@ const Task = ({ item, remove, update, changeStatus }: Props) => {
 
   return (
     <ListItem
-      key={item.id}
       onClick={() => update(item)}
       style={{
         cursor: "pointer",
@@ -69,6 +71,7 @@ const Task = ({ item, remove, update, changeStatus }: Props) => {
     >
       <ListItemAvatar>
         <Checkbox
+          inputProps={{ "data-testid": "checkbox" } as MyCheckboxDisplayProps}
           color="success"
           checked={item.status}
           onClick={(e) => e.stopPropagation()}

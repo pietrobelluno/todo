@@ -16,9 +16,11 @@ export const Status = styled.div<Props>`
   margin-bottom: 4px;
 `;
 
-export const DueDate = styled.p`
+export const DueDate = styled.span`
   font-size: 12px;
   margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
   border-top: 1px solid #efefef;
   border-bottom: 1px solid #efefef;
   padding: 5px 0px;
@@ -29,9 +31,10 @@ export const DueDate = styled.p`
   letter-spacing: -0.2px;
 `;
 
-export const Description = styled.p`
+export const Description = styled.span`
   font-size: 14px;
   margin: 0px;
+  display: block;
   word-wrap: break-word;
 `;
 

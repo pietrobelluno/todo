@@ -1,5 +1,4 @@
-import { Button, Container, Fab, List } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
+import { Container } from "@mui/material";
 
 import { useEffect, useState } from "react";
 
@@ -8,13 +7,13 @@ import { TaskDto } from "./api/dto/task.dto";
 import { CreateTaskDto } from "./api/dto/create-task.dto";
 import { UpdateTaskDto } from "./api/dto/update-task.dto";
 
-import Task from "./components/Task";
 import CreateTaskModal from "./components/CreateTaskModal";
 import EditTaskModal from "./components/EditTaskModal";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Box } from "@mui/system";
+import { TaskList } from "./components/TaskList";
+import Footer from "./components/Footer";
 
 function App() {
   const [taskList, setTaskList] = useState<TaskDto[]>([]);
@@ -34,10 +33,13 @@ function App() {
     "all"
   );
 
+  const [loading, setLoading] = useState<boolean>(true);
+
   useEffect(() => {
     (async () => {
       const tasks = await findAllTasks();
       setTaskList(tasks);
+      setLoading(false);
     })();
   }, []);
 
@@ -91,13 +93,10 @@ function App() {
     switch (filter) {
       case "todo":
         return tasks.filter((task) => task.status === false);
-
       case "done":
         return tasks.filter((task) => task.status === true);
-
       case "today":
         return tasks.filter((task) => isToday(task.dueDate));
-
       case "all":
         return tasks;
     }
@@ -122,87 +121,18 @@ function App() {
           update={handleUpdate}
           close={() => setIsUpdateModalOpen(false)}
         />
-        {/* <Typography variant="h5">Todo List</Typography> */}
-        <div
-          style={{
-            height: "100vh",
-            position: "relative",
-            padding: "10px",
-            boxSizing: "border-box",
-          }}
-        >
-          <List
-            dense={false}
-            style={{
-              maxHeight: "calc(100% - 100px)",
-              overflow: "scroll",
-              display: "flex",
-              flexDirection: "column",
-              gap: "10px",
-            }}
-          >
-            {filterTasks(taskList).map((task) => (
-              <Task
-                item={task}
-                remove={handleRemove}
-                update={handleOpenUpdateModal}
-                changeStatus={handleChangeStatus}
-              />
-            ))}
-          </List>
-        </div>
-        <Box
-          position="absolute"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          gap="10px"
-          width="100%"
-          // width="100%"
-          bottom="10px"
-          style={{
-            borderTop: "1px solid #efefef",
-            padding: "10px 0px",
-            boxSizing: "border-box",
-          }}
-        >
-          <Button
-            onClick={() => setFilter("all")}
-            variant="contained"
-            size="small"
-          >
-            All
-          </Button>
-          <Button
-            onClick={() => setFilter("todo")}
-            variant="contained"
-            size="small"
-          >
-            To Do
-          </Button>
-          <Button
-            onClick={() => setFilter("done")}
-            variant="contained"
-            size="small"
-          >
-            Done
-          </Button>
-          <Button
-            onClick={() => setFilter("today")}
-            variant="contained"
-            size="small"
-          >
-            Today
-          </Button>
-          <Fab
-            color="secondary"
-            aria-label="add"
-            size="small"
-            onClick={() => setIsCreateModalOpen(true)}
-          >
-            <AddIcon />
-          </Fab>
-        </Box>
+        <TaskList
+          taskList={taskList}
+          loading={loading}
+          remove={handleRemove}
+          openUpdateModal={handleOpenUpdateModal}
+          changeStatus={handleChangeStatus}
+          filterTasks={filterTasks}
+        />
+        <Footer
+          setFilter={setFilter}
+          setIsCreateModalOpen={setIsCreateModalOpen}
+        />
       </Container>
     </>
   );
