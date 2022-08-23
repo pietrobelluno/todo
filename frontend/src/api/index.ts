@@ -5,7 +5,7 @@ import { TaskDto } from "./dto/task.dto";
 import { UpdateTaskDto } from "./dto/update-task.dto";
 
 const api = axios.create({
-  baseURL: `${process.env.REACT_APP_SERVER_URL}`,
+  baseURL: `${process.env.REACT_APP_API_URL}`,
 });
 
 api.interceptors.response.use(
