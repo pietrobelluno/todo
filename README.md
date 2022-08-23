@@ -1,7 +1,7 @@
 # todo list by Pietro Belluno
 
 ## how to run 
-  - first of all you need to clone the project itself for your machine.
+  - first of all you need to clone the project to your machine.
 
 ### run frontend:
   - you need to edit the api url in the `.env`, see `.env-example` file
