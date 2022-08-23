@@ -23,13 +23,14 @@
   - run `npm run test` or `yarn test`
 
 
-video preview: <br>
-https://www.loom.com/share/b6e0d91c294e45f5b85f4a31e84fe364
+## video preview:
+https://user-images.githubusercontent.com/23633309/186058531-50060397-87dd-47cb-852b-2c6b82aa3913.mp4
 
-image preview: <br>
+
+## image preview:
 <img width="476" alt="Screen Shot 2022-08-22 at 23 22 38" src="https://user-images.githubusercontent.com/23633309/186055516-80f67937-994d-4a7b-8844-9bd8892813e2.png">
 
-### Used technologies
+## used technologies
   - React
   - Typescript
   - Nest
