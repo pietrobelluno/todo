@@ -2,11 +2,14 @@
 
 ## how to run 
   - first of all you need to clone the project to your machine.
+  - second you need to create a database in `postgres`
+  
 
 ### run frontend:
-  - you need to edit the api url in the `.env`, see `.env-example` file
+  - you need to create `.env` file, see `.env-example` file
   - in the frontend folder
   - run `npm run start` or `yarn start`
+  - the frontend will run in http://localhost:3000/
 
 ### run tests in frontend:
   - in the frontend folder
@@ -14,13 +17,14 @@
   - to see the coverage run `npm run coverage` or `yarn coverage`
 
 ### run backend:
-  - you need to edit the connections of your database in the `.env`, see the `.env-example` file
+  - you need to create a `.env` file, see the `.env-example` file
   - in the backend folder 
   - run `npm run start` or `yarn start`
 
 ### run tests in backend:
   - in the backend folder
   - run `npm run test` or `yarn test`
+  - the backend will run in http://localhost:8081/
 
 
 ## video preview:
