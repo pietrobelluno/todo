@@ -8,22 +8,22 @@
 ### run frontend:
   - you need to create `.env` file, see `.env-example` file
   - in the frontend folder
-  - run `npm run start` or `yarn start`
+  - run `npm run start`
   - the frontend will run in http://localhost:3000/
 
 ### run tests in frontend:
   - in the frontend folder
-  - run `npm run test` or `yarn test`
-  - to see the coverage run `npm run coverage` or `yarn coverage`
+  - run `npm run test`
+  - to see the coverage run `npm run coverage`
 
 ### run backend:
   - you need to create a `.env` file, see the `.env-example` file
   - in the backend folder 
-  - run `npm run start` or `yarn start`
+  - run `npm run start`
 
 ### run tests in backend:
   - in the backend folder
-  - run `npm run test` or `yarn test`
+  - run `npm run test`
   - the backend will run in http://localhost:8081/
 
 
