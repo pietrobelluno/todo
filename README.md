@@ -20,7 +20,7 @@
 ### running tests:
   - `cd` to either the frontend or backend folder
   - run `npm run test`
-  - run `npm run coverage` if you want to see the coverage report
+  - run `npm run test:cov` if you want to see the coverage report
 
 
 
