@@ -13,7 +13,7 @@
 
 ### run tests in frontend:
   - in the frontend folder
-  - run `npm run test` or `yarn test`
+  - run `npm run test`
   - to see the coverage run `npm run coverage`
 
 ### run backend:
