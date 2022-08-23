@@ -33,7 +33,7 @@ export const TaskList = ({
               dense={false}
               style={{
                 maxHeight: "calc(100% - 74px)",
-                overflow: "scroll",
+                overflowY: "scroll",
                 display: "flex",
                 flexDirection: "column",
                 gap: "10px",
