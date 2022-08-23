@@ -25,7 +25,7 @@ describe('TaskService', () => {
           id: '1',
           title: 'New Task',
           description: 'Description',
-          dueDate: '2022-08-25T12:00:00Z',
+          dueDate: '2022-08-25T09:00',
           status: false,
           createdAt: '2022-08-22T03:25:40.740Z',
           updatedAt: '2022-08-22T03:25:40.740Z',
@@ -37,7 +37,7 @@ describe('TaskService', () => {
         id,
         title: 'New Task',
         description: 'Description',
-        dueDate: '2022-08-25T12:00:00Z',
+        dueDate: '2022-08-25T09:00',
         status: true,
         createdAt: '2022-08-22T03:25:40.740Z',
         updatedAt: '2022-08-22T03:25:40.740Z',
@@ -81,7 +81,7 @@ describe('TaskService', () => {
     const data: CreateTaskDto = {
       title: 'New Task',
       description: 'Description',
-      dueDate: '2022-08-25T12:00:00Z',
+      dueDate: '2022-08-25T09:00',
     };
     expect(await taskService.create(data)).toEqual({
       ...data,
@@ -96,7 +96,7 @@ describe('TaskService', () => {
     const data: UpdateTaskDto = {
       title: 'New Task',
       description: 'Description',
-      dueDate: '2022-08-25T12:00:00Z',
+      dueDate: '2022-08-25T09:00',
       status: true,
     };
     expect(await taskService.update('1', data)).toEqual({
@@ -117,7 +117,7 @@ describe('TaskService', () => {
       id: '1',
       title: 'New Task',
       description: 'Description',
-      dueDate: '2022-08-25T12:00:00Z',
+      dueDate: '2022-08-25T09:00',
       status: true,
       createdAt: '2022-08-22T03:25:40.740Z',
       updatedAt: '2022-08-22T03:25:40.740Z',
@@ -134,7 +134,7 @@ describe('TaskService', () => {
         id: '1',
         title: 'New Task',
         description: 'Description',
-        dueDate: '2022-08-25T12:00:00Z',
+        dueDate: '2022-08-25T09:00',
         status: false,
         createdAt: '2022-08-22T03:25:40.740Z',
         updatedAt: '2022-08-22T03:25:40.740Z',

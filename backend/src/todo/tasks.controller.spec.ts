@@ -20,7 +20,7 @@ describe('TasksController', () => {
         id: '1',
         title: 'New Task',
         description: 'Description',
-        dueDate: '2022-08-25T12:00:00Z',
+        dueDate: '2022-08-25T09:00',
         status: false,
         createdAt: '2022-08-22T03:25:40.740Z',
         updatedAt: '2022-08-22T03:25:40.740Z',
@@ -30,7 +30,7 @@ describe('TasksController', () => {
       id,
       title: 'New Task',
       description: 'Description',
-      dueDate: '2022-08-25T12:00:00Z',
+      dueDate: '2022-08-25T09:00',
       status: false,
       createdAt: '2022-08-22T03:25:40.740Z',
       updatedAt: '2022-08-22T03:25:40.740Z',
@@ -66,7 +66,7 @@ describe('TasksController', () => {
     const data: CreateTaskDto = {
       title: 'New Task',
       description: 'Description',
-      dueDate: '2022-08-25T12:00:00Z',
+      dueDate: '2022-08-25T09:00',
     };
     expect(taskController.create(data)).toEqual({
       ...data,
@@ -82,7 +82,7 @@ describe('TasksController', () => {
     const data: UpdateTaskDto = {
       title: 'Updated Task',
       description: 'New Description',
-      dueDate: '2022-08-25T12:00:00Z',
+      dueDate: '2022-08-25T09:00',
       status: true,
     };
     expect(taskController.update('1', data)).toEqual({
@@ -105,7 +105,7 @@ describe('TasksController', () => {
       id: '1',
       title: 'New Task',
       description: 'Description',
-      dueDate: '2022-08-25T12:00:00Z',
+      dueDate: '2022-08-25T09:00',
       status: false,
       createdAt: '2022-08-22T03:25:40.740Z',
       updatedAt: '2022-08-22T03:25:40.740Z',
@@ -120,7 +120,7 @@ describe('TasksController', () => {
         id: '1',
         title: 'New Task',
         description: 'Description',
-        dueDate: '2022-08-25T12:00:00Z',
+        dueDate: '2022-08-25T09:00',
         status: false,
         createdAt: '2022-08-22T03:25:40.740Z',
         updatedAt: '2022-08-22T03:25:40.740Z',

@@ -17,7 +17,7 @@ export class TaskEntity {
   @Column({ name: 'description', nullable: true, length: 256 })
   description?: string;
 
-  @Column({ name: 'due_date', type: 'timestamp', nullable: true })
+  @Column({ name: 'due_date', nullable: true })
   dueDate?: string;
 
   @Column({ name: 'status', default: false })
